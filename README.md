@@ -7,9 +7,7 @@
 [![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-purple.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
-[Live Demo](https://your-vercel-url.vercel.app) • [Report Bug](https://github.com/Papadizzo/my-portfolio/issues) • [Request Feature](https://github.com/Papadizzo/my-portfolio/issues)
-
-![Portfolio Preview](https://via.placeholder.com/800x400/1a1a2e/8b5cf6?text=Portfolio+Preview)
+[Live Demo](https://morindat.netlify.app) • [Report Bug](https://github.com/Papadizzo/my-portfolio/issues) • [Request Feature](https://github.com/Papadizzo/my-portfolio/issues)
 
 </div>
 
