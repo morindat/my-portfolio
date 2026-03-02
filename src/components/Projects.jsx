@@ -7,7 +7,7 @@ const Projects = () => {
       title: "Personal Portfolio Website",
       description: "My personal portfolio built with React and TailwindCSS. Features a clean, modern design with smooth animations and a sci-fi inspired aesthetic.",
       tech: ["React", "TailwindCSS", "Vite", "React Icons"],
-      liveDemo: "https://your-portfolio-url.com", // Replace with your actual URL
+      liveDemo: "https://morindat.netlify.app/", // Replace with your actual URL
       isPortfolio: true // Special flag for portfolio project
     },
     {
