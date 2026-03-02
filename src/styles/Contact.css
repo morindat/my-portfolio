@@ -1,0 +1,91 @@
+/* contact.css */
+@keyframes gridMove {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(50px, 50px);
+  }
+}
+
+@keyframes floatParticle {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.bg-300\% {
+  background-size: 300% 300%;
+}
+
+.animate-gradient {
+  animation: gradient 6s ease infinite;
+}
+
+.animate-grid {
+  animation: gridMove 20s linear infinite;
+}
+
+.animate-particle {
+  animation: floatParticle linear infinite;
+}
+
+/* Grid Animation */
+@keyframes grid {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(50px); }
+}
+
+.animate-grid {
+  animation: grid 2s linear infinite;
+}
+
+/* Particle Animation */
+@keyframes particle {
+  0%, 100% { transform: translateY(0) translateX(0); opacity: 0; }
+  50% { opacity: 1; }
+  100% { transform: translateY(-100px) translateX(50px); opacity: 0; }
+}
+
+.animate-particle {
+  animation: particle linear infinite;
+}
+
+/* Gradient Text Animation */
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-gradient {
+  background-size: 300% 300%;
+  animation: gradient 8s ease infinite;
+}
+
+.bg-300\% {
+  background-size: 300% 300%;
+}

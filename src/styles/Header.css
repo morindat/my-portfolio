@@ -1,0 +1,156 @@
+.header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  width: 100%;
+  background: transparent;
+  transition: background 0.30s, box-shadow 0.30s;
+  z-index: 100;
+  box-shadow: none;
+  border-bottom: none;
+  opacity: 0.96;
+}
+
+.header--scrolled {
+  background: rgba(24, 24, 28, 0.72);
+  box-shadow: 0 2px 16px rgba(0,0,0,0.20);
+  border-bottom: 1px solid rgba(80,80,90,0.14);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 36px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Logo Styles */
+.header-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: transform 0.19s;
+}
+
+.header-logo:hover {
+  transform: scale(1.07) rotate(-2deg);
+}
+
+.header-logo svg {
+  width: 40px;
+  height: 40px;
+  filter: drop-shadow(0 0 8px rgba(168, 85, 247, 0.3));
+  animation: scannerPulse 3s infinite;
+}
+
+/* Remove or comment out the old gradient-text styles if you're not using them */
+/* .gradient-text {
+  background: linear-gradient(90deg, #6a82fb 0%, #fc5c7d 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-shadow: 0 1px 10px rgba(106, 130, 251, 0.13);
+  transition: text-shadow 0.2s;
+}
+
+.header-logo:hover .gradient-text {
+  text-shadow: 0 2px 18px rgba(252, 92, 125, 0.22);
+} */
+
+/* Navigation Styles */
+.header-nav {
+  display: flex;
+  gap: 32px;
+}
+
+.header-link {
+  color: #b39ddb;
+  text-decoration: none;
+  font-size: 1.08rem;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  transition: color 0.18s;
+  position: relative;
+  padding: 0 3px;
+  font-family: 'Montserrat', 'Orbitron', sans-serif;
+}
+
+.header-link:hover,
+.header-link.active {
+  color: #6a82fb;
+}
+
+.header-link::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2.5px;
+  background: #6a82fb;
+  transition: width .2s;
+  position: absolute;
+  left: 0; bottom: -6px;
+  border-radius: 2px;
+}
+
+.header-link:hover::after,
+.header-link.active::after {
+  width: 100%;
+}
+
+/* Social Icons */
+.header-socials {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+.header-social-link {
+  color: #ececec;
+  font-size: 1.2rem;
+  opacity: 0.82;
+  transition: color 0.19s, opacity 0.19s, transform 0.18s, box-shadow 0.2s;
+  box-shadow: 0 1px 6px rgba(80,90,255,0.04);
+  border-radius: 2px;
+}
+
+.header-social-link:hover {
+  color: #fc5c7d;
+  opacity: 1;
+  transform: translateY(-2px) scale(1.18) rotate(-4deg);
+  box-shadow: 0 2px 16px rgba(252,92,125,0.14);
+}
+
+/* Scanner Pulse Animation */
+@keyframes scannerPulse {
+  0% {
+    filter: drop-shadow(0 0 5px rgba(168, 85, 247, 0.3));
+  }
+  50% {
+    filter: drop-shadow(0 0 15px rgba(14, 165, 233, 0.5));
+  }
+  100% {
+    filter: drop-shadow(0 0 5px rgba(168, 85, 247, 0.3));
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header-inner {
+    padding: 10px 12px;
+  }
+  
+  .header-nav {
+    gap: 18px;
+  }
+  
+  .header-logo svg {
+    width: 32px;
+    height: 32px;
+  }
+}
