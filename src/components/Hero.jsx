@@ -39,40 +39,40 @@ const Hero = () => {
   }, [text, isDeleting, index, roles]);
 
   return (
-    <section id="hero" className="min-h-screen flex items-center px-6 relative overflow-hidden pt-24 bg-gradient-to-br from-[#0a0a0f] via-[#0f0f1a] to-[#1a0f1a]">
-      
+    <section id="hero" className="min-h-screen flex items-center px-4 sm:px-6 relative overflow-hidden pt-24 bg-gradient-to-br from-[#0a0a0f] via-[#0f0f1a] to-[#1a0f1a]">
+
       {/* Subtle animated background blobs */}
       <div className="absolute top-20 left-10 w-72 h-72 bg-purple-600/20 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
       <div className="absolute bottom-20 right-10 w-96 h-96 bg-pink-600/10 rounded-full mix-blend-multiply filter blur-3xl animate-pulse delay-1000"></div>
 
       {/* Content Container */}
       <div className="max-w-7xl mx-auto w-full relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+
           {/* Left Side: Text Content */}
           <div className="order-2 lg:order-1">
-            
-            <p className="text-purple-400 text-4xl sm:text-5xl mb-6 font-bold" 
+
+            <p className="text-purple-400 text-3xl sm:text-4xl lg:text-5xl mb-6 font-bold break-words"
                style={{ fontFamily: "'Comic Sans MS', 'Chalkboard SE', 'Marker Felt', sans-serif" }}>
               HELLO,
             </p>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 leading-tight break-words"
                 style={{ fontFamily: "'Comic Sans MS', 'Chalkboard SE', 'Marker Felt', sans-serif" }}>
-              It's Morindat, 
+              It's Morindat,
             </h1>
 
-            <div className="text-2xl sm:text-3xl lg:text-4xl font-medium mb-8 flex items-center gap-2">
+            <div className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-medium mb-8 flex items-center gap-2 flex-wrap">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
                 A
               </span>
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
                 {text}
               </span>
-              <span className="w-3 h-8 bg-purple-400 animate-pulse"></span>
+              <span className="w-3 h-8 bg-purple-400 animate-pulse shrink-0"></span>
             </div>
 
-            <p className="text-gray-400 text-xl leading-relaxed mb-8 max-w-xl"
+            <p className="text-gray-400 text-lg sm:text-xl leading-relaxed mb-8 max-w-xl"
                style={{ fontFamily: "'Amatic SC', cursive", fontWeight: "400" }}>
               A personal website of another one of the so called{" "}
               <span className="text-white font-bold">"self-taught"</span>{" "}
@@ -82,13 +82,13 @@ const Hero = () => {
             <div className="flex flex-wrap gap-4">
               <a
                 href="#contact"
-                className="px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg font-medium text-white hover:opacity-90 transition-opacity shadow-lg shadow-purple-500/25"
+                className="px-6 sm:px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg font-medium text-white hover:opacity-90 transition-opacity shadow-lg shadow-purple-500/25"
               >
                 Get In Touch
               </a>
               <a
                 href="#projects"
-                className="px-8 py-3 border border-white/20 rounded-lg font-medium text-white hover:bg-white/5 transition-colors"
+                className="px-6 sm:px-8 py-3 border border-white/20 rounded-lg font-medium text-white hover:bg-white/5 transition-colors"
               >
                 View Projects
               </a>
@@ -98,8 +98,8 @@ const Hero = () => {
 
           {/* Right Side: Flip Card */}
           <div className="order-1 lg:order-2 flex justify-center items-center">
-            <div 
-              className="relative w-72 h-96 cursor-pointer group perspective-1000"
+            <div
+              className="relative w-64 h-80 sm:w-72 sm:h-96 cursor-pointer group perspective-1000"
               onClick={() => setIsFlipped(!isFlipped)}
               onMouseEnter={() => setIsFlipped(true)}
               onMouseLeave={() => setIsFlipped(false)}
@@ -151,7 +151,7 @@ const Hero = () => {
             </div>
             
             {/* Hint text */}
-            <p className="absolute -bottom-12 text-gray-500 text-sm lg:hidden">Tap to flip</p>
+            <p className="absolute -bottom-10 text-gray-500 text-sm lg:hidden">Tap to flip</p>
           </div>
 
         </div>

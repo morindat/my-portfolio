@@ -7,7 +7,7 @@ import Skills from "../components/Skills";
 
 const Home = () => {
     return (
-        <div className="min-h-screen bg-[#0a0a0f] text-white">
+        <div className="min-h-screen bg-[#0a0a0f] text-white overflow-x-hidden">
             {/* Now we can render the pages */}
             <Header />
             <Hero />

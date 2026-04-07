@@ -31,7 +31,7 @@ const About = () => {
   return (
     <section id="about" className="min-h-screen py-20 px-6 bg-gradient-to-b from-[#0a0a0f] to-[#1a1a2e]">
       <div className="max-w-6xl mx-auto">
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid md:grid-cols-2 gap-12">
           
           {/* Left Column */}
           <div className="space-y-8">

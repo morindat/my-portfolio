@@ -144,13 +144,137 @@
   .header-inner {
     padding: 10px 12px;
   }
-  
+
   .header-nav {
-    gap: 18px;
+    display: none;
   }
-  
+
+  .header-socials {
+    display: none;
+  }
+
   .header-logo svg {
     width: 32px;
     height: 32px;
+  }
+
+  /* Hamburger Button */
+  .header-hamburger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: #b39ddb;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+  }
+
+  .header-hamburger:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #6a82fb;
+  }
+
+  /* Mobile Menu */
+  .mobile-menu {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(10, 10, 15, 0.97);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    z-index: 99;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+  }
+
+  .mobile-menu--open {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .mobile-menu-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .mobile-menu-link {
+    color: #b39ddb;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: color 0.2s;
+    position: relative;
+    padding: 8px 16px;
+    font-family: 'Montserrat', 'Orbitron', sans-serif;
+  }
+
+  .mobile-menu-link:hover,
+  .mobile-menu-link.active {
+    color: #6a82fb;
+  }
+
+  .mobile-menu-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #6a82fb;
+    transition: width 0.2s;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    border-radius: 2px;
+  }
+
+  .mobile-menu-link:hover::after,
+  .mobile-menu-link.active::after {
+    width: 60%;
+  }
+
+  .mobile-menu-socials {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    margin-top: 16px;
+  }
+
+  .mobile-social-link {
+    color: #ececec;
+    font-size: 1.5rem;
+    opacity: 0.82;
+    transition: color 0.2s, opacity 0.2s, transform 0.2s;
+  }
+
+  .mobile-social-link:hover {
+    color: #fc5c7d;
+    opacity: 1;
+    transform: scale(1.15);
+  }
+}
+
+@media (min-width: 769px) {
+  .header-hamburger {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: none;
   }
 }
