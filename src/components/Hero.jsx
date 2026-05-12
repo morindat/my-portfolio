@@ -53,7 +53,7 @@ const Hero = () => {
       <div className="absolute bottom-20 right-10 w-96 h-96 bg-pink-600/10 rounded-full mix-blend-multiply filter blur-3xl animate-pulse delay-1000"></div>
 
       {/* Content Container */}
-      <div className="max-w-6xl mx-auto w-full relative z-10 px-4 sm:px-6 py-12 lg:py-16">
+      <div className="max-w-6xl mx-auto w-full relative z-10 px-4 sm:px-6 pt-20 lg:pt-24 pb-12 lg:pb-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
 
           {/* Left Side: Text Content */}
@@ -83,7 +83,7 @@ const Hero = () => {
                style={{ fontFamily: "'Amatic SC', cursive", fontWeight: "400" }}>
               A personal website of another one of the so called{" "}
               <span className="text-white font-bold">"self-taught"</span>{" "}
-              developer. Building cool stuff one line at a time.
+              developer. Building cool stuffs one line at a time.
             </p>
 
             <div className="flex flex-wrap gap-4">
