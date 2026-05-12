@@ -38,15 +38,22 @@ const Hero = () => {
     return () => clearTimeout(timer);
   }, [text, isDeleting, index, roles]);
 
+  const scrollToSkills = () => {
+    const skillsSection = document.getElementById('skills');
+    if (skillsSection) {
+      skillsSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <section id="hero" className="min-h-screen flex items-center px-4 sm:px-6 relative overflow-hidden pt-24 bg-gradient-to-br from-[#0a0a0f] via-[#0f0f1a] to-[#1a0f1a]">
+    <section id="hero" className="min-h-screen flex items-center relative overflow-hidden bg-gradient-to-br from-[#0a0a0f] via-[#0f0f1a] to-[#1a0f1a]">
 
       {/* Subtle animated background blobs */}
       <div className="absolute top-20 left-10 w-72 h-72 bg-purple-600/20 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
       <div className="absolute bottom-20 right-10 w-96 h-96 bg-pink-600/10 rounded-full mix-blend-multiply filter blur-3xl animate-pulse delay-1000"></div>
 
       {/* Content Container */}
-      <div className="max-w-7xl mx-auto w-full relative z-10">
+      <div className="max-w-6xl mx-auto w-full relative z-10 px-4 sm:px-6 py-12 lg:py-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
 
           {/* Left Side: Text Content */}
@@ -99,14 +106,14 @@ const Hero = () => {
           {/* Right Side: Flip Card */}
           <div className="order-1 lg:order-2 flex justify-center items-center">
             <div
-              className="relative w-64 h-80 sm:w-72 sm:h-96 cursor-pointer group perspective-1000"
+              className="relative w-64 h-80 sm:w-72 sm:h-96 cursor-pointer group"
               onClick={() => setIsFlipped(!isFlipped)}
               onMouseEnter={() => setIsFlipped(true)}
               onMouseLeave={() => setIsFlipped(false)}
             >
               {/* Card Container */}
               <div 
-                className={`relative w-full h-full transition-all duration-700 transform-style-3d ${
+                className={`relative w-full h-full transition-all duration-700 ${
                   isFlipped ? 'rotate-y-180' : ''
                 }`}
                 style={{
@@ -117,7 +124,7 @@ const Hero = () => {
                 
                 {/* Front of Card */}
                 <div 
-                  className="absolute inset-0 w-full h-full rounded-2xl overflow-hidden shadow-2xl shadow-purple-500/20 border-2 border-purple-500/30 backface-hidden"
+                  className="absolute inset-0 w-full h-full rounded-2xl overflow-hidden shadow-2xl shadow-purple-500/20 border-2 border-purple-500/30"
                   style={{ backfaceVisibility: 'hidden' }}
                 >
                   <img 
@@ -132,7 +139,7 @@ const Hero = () => {
                   </div>
                 </div>
 
-                {/* Back of Card - NO OVERLAY (Clean Image) */}
+                {/* Back of Card */}
                 <div 
                   className="absolute inset-0 w-full h-full rounded-2xl overflow-hidden shadow-2xl shadow-pink-500/20 border-2 border-pink-500/30 bg-[#0a0a0f]"
                   style={{ 
@@ -151,9 +158,29 @@ const Hero = () => {
             </div>
             
             {/* Hint text */}
-            <p className="absolute -bottom-10 text-gray-500 text-sm lg:hidden">Tap to flip</p>
+            <p className="absolute -bottom-8 text-gray-500 text-sm lg:hidden">Tap to flip</p>
           </div>
 
+        </div>
+      </div>
+
+      {/* Clickable Scroll Indicator */}
+      <div 
+        className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 hidden lg:block cursor-pointer group"
+        onClick={scrollToSkills}
+      >
+        <div className="flex flex-col items-center gap-1">
+          <span className="text-gray-500 text-xs font-mono tracking-wider opacity-70 group-hover:opacity-100 group-hover:text-purple-400 transition-all duration-300">
+            SCROLL
+          </span>
+          <svg 
+            className="w-3 h-3 text-gray-500 animate-bounce opacity-70 group-hover:opacity-100 group-hover:text-purple-400 transition-all duration-300" 
+            fill="none" 
+            stroke="currentColor" 
+            viewBox="0 0 24 24"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+          </svg>
         </div>
       </div>
     </section>

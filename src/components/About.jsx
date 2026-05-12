@@ -12,7 +12,7 @@ const About = () => {
   const languages = [
     { name: "Swahili", level: "Native" },
     { name: "English", level: "Fluent" },
-    { name: "Chinese", level: "Learning" }
+    { name: "Mandarin", level: "Learning" }
   ];
 
   const personalSkills = [

@@ -92,7 +92,7 @@ const Header = () => {
             className={`header-link ${activeSection === "about" ? "active" : ""}`}
             onClick={(e) => handleNavClick(e, "about")}
           >
-            About
+            Resume
           </a>
           <a
             href="#contact"
