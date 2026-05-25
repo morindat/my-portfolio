@@ -39,34 +39,6 @@ A futuristic, sci-fi inspired portfolio website showcasing my journey as a devel
 | **Deployment** | Vercel (soon!) |
 | **Version Control** | Git & GitHub |
 
-## 📂 Project Structure
-📦 portfolio
-├── 📁 public
-│ ├── 📄 favicon.ico
-│ └── 📄 apple-touch-icon.png
-├── 📁 src
-│ ├── 📁 components
-│ │ ├── 📄 Header.jsx # Navigation with scroll effect
-│ │ ├── 📄 Hero.jsx # Landing with typewriter
-│ │ ├── 📄 Skills.jsx # Tech stack showcase
-│ │ ├── 📄 Projects.jsx # Project cards with GitHub links
-│ │ ├── 📄 Contact.jsx # Working contact form
-│ │ └── 📄 Logo.jsx # Custom JD logo animation
-│ ├── 📁 styles
-│ │ ├── 📄 Header.css
-│ │ └── 📄 Contact.css
-│ ├── 📁 assets
-│ │ └── 📄 Pops.jpg and Papaa.jpd # Hero background
-│ ├── 📄 App.jsx
-│ ├── 📄 main.jsx
-│ └── 📄 index.css
-├── 📄 index.html
-├── 📄 package.json
-├── 📄 tailwind.config.js
-├── 📄 vite.config.js
-└── 📄 README.md
-
-
 ## 🚀 Featured Projects
 
 ### 1. **Mars Retrograde Motion Analysis** 🔴
