@@ -2,18 +2,19 @@ import { useState, useEffect } from "react";
 import profileFront from "../assets/Pops.jpg";
 import profileBack from "../assets/Papaa.jpg";
 
+const roles = [
+    "Web Developer",
+    "Aspiring SWE",
+    "Full Stack Developer",
+    "Tech Enthusiast",
+];
+
 const Hero = () => {
   const [text, setText] = useState("");
   const [index, setIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [isFlipped, setIsFlipped] = useState(false);
 
-  const roles = [
-    "Web Developer",
-    "Aspiring SWE",
-    "Full Stack Developer",
-    "Tech Enthusiast",
-  ];
 
   useEffect(() => {
     const currentRole = roles[index];
@@ -36,7 +37,7 @@ const Hero = () => {
     }, isDeleting && text === currentRole ? pauseTime : typingSpeed);
 
     return () => clearTimeout(timer);
-  }, [text, isDeleting, index, roles]);
+  }, [text, isDeleting, index]);
 
   const scrollToSkills = () => {
     const skillsSection = document.getElementById('skills');
@@ -79,11 +80,11 @@ const Hero = () => {
               <span className="w-3 h-8 bg-purple-400 animate-pulse shrink-0"></span>
             </div>
 
-            <p className="text-gray-400 text-lg sm:text-xl leading-relaxed mb-8 max-w-xl"
+            <p className="text-gray-400 text-lg sm:text-xl lg:text-2xl leading-relaxed mb-8 max-w-xl"
                style={{ fontFamily: "'Amatic SC', cursive", fontWeight: "400" }}>
-              A personal website of another one of the so called{" "}
-              <span className="text-white font-bold">"self-taught"</span>{" "}
-              developer. Building cool stuffs one line at a time.
+              A personal website of an aspiring {" "}
+              <span className="text-white font-bold">"software engineer"</span>{" "}
+               Building cool stuffs one line at a time.
             </p>
 
             <div className="flex flex-wrap gap-4">
@@ -104,7 +105,7 @@ const Hero = () => {
           </div>
 
           {/* Right Side: Flip Card */}
-          <div className="order-1 lg:order-2 flex justify-center items-center">
+          <div className="order-1 lg:order-2 flex justify-center lg:justify-end items-center">
             <div
               className="relative w-64 h-80 sm:w-72 sm:h-96 cursor-pointer group"
               onClick={() => setIsFlipped(!isFlipped)}
@@ -129,8 +130,12 @@ const Hero = () => {
                 >
                   <img 
                     src={profileFront} 
-                    alt="Profile Front" 
+                    alt="Profile Front - Morindat" 
                     className="w-full h-full object-cover"
+                    onError={(e) => {
+                      e.target.onerror = null;
+                      e.target.src = 'https://via.placeholder.com/400x500/1a0f1a/ffffff?text=Morindat';
+                    }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-purple-900/60 to-transparent"></div>
                   <div className="absolute bottom-4 left-4 right-4">
@@ -149,15 +154,20 @@ const Hero = () => {
                 >
                   <img 
                     src={profileBack} 
-                    alt="Profile Back" 
+                    alt="Profile Back - Morindat" 
                     className="absolute inset-0 w-full h-full object-cover"
+                    onError={(e) => {
+                      e.target.onerror = null;
+                      e.target.src = 'https://via.placeholder.com/400x500/0a0a0f/ffffff?text=Back+View';
+                    }}
                   />
                 </div>
 
               </div>
             </div>
             
-            {/* Hint text */}
+            {/* Hint text - changes based on device */}
+            <p className="absolute -bottom-8 text-gray-500 text-sm hidden lg:block">Hover to flip</p>
             <p className="absolute -bottom-8 text-gray-500 text-sm lg:hidden">Tap to flip</p>
           </div>
 

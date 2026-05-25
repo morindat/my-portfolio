@@ -28,6 +28,22 @@ const Skills = () => {
     { name: "Matplotlib", level: 60, icon: <FaPython /> }
   ];
 
+  // Course work data
+  const courses = [
+    "Data Structures & Algorithms",
+    "Design & Analysis of Algorithms",
+    "Operating Systems",
+    "Computer Organization & Architecture",
+    "Database Management Systems",
+    "Programming Lab",
+    "Intro to Machine Learning",
+    "Linear Algebra",
+    "Probability & Statistics",
+    "Computer Networks",
+    "Object-Oriented Programming",
+    "Discrete Mathematics"
+  ];
+
   return (
     <section id="skills" className="py-20 px-6 bg-gradient-to-b from-[#0a0a0f] via-[#0f0f1a] to-[#0a0a0f] relative">
       
@@ -64,7 +80,53 @@ const Skills = () => {
             </div>
           </div>
         </div>
+
+        {/* Course Work Marquee Section */}
+        <div className="mt-20 pt-8 border-t border-white/10">
+          <div className="text-center mb-8">
+            <h3 className="text-2xl sm:text-3xl font-bold">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
+                Relevant Course Work
+              </span>
+            </h3>
+          </div>
+
+          {/* Scrolling Marquee - Only one row now */}
+          <div className="relative overflow-hidden py-6">
+            <div className="animate-scroll-left whitespace-nowrap">
+              {courses.map((course, idx) => (
+                <span key={idx} className="inline-block mx-4 text-lg md:text-xl text-gray-300 font-medium">
+                  {course}
+                  {idx < courses.length - 1 && (
+                    <span className="mx-6 text-purple-500 text-2xl font-bold">|</span>
+                  )}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
+
+      {/* Add keyframe animations */}
+      <style jsx>{`
+        @keyframes scroll-left {
+          0% {
+            transform: translateX(0%);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+        
+        .animate-scroll-left {
+          animation: scroll-left 20s linear infinite;
+          display: inline-block;
+        }
+        
+        .animate-scroll-left:hover {
+          animation-play-state: paused;
+        }
+      `}</style>
     </section>
   );
 };

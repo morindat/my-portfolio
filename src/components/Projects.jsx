@@ -24,9 +24,16 @@ const Projects = () => {
     },
     {
       title: "Dynamic Array API",
-      description: "A dynamic array API in C that works like std::vector in C++.",
+      description: "A custom dynamic array API implemented from scratch in C that works like std::vector in C++.",
       tech: ["C", "C++"],
       github: "https://github.com/Papadizzo/dynamic-array-api",
+      isPortfolio: false
+    },
+    {
+      title: "myMalloc",
+      description: "A custom memory allocator implemented in C++17, replacing malloc, free, calloc, and realloc with a from-scratch implementation using sbrk for small allocations and mmap for large ones.",
+      tech: ["C++", "sbrk", "mmap"],
+      github: "https://github.com/Papadizzo/malloc",
       isPortfolio: false
     }
   ];
