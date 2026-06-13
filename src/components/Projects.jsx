@@ -39,23 +39,15 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="relative py-20 px-6 overflow-hidden bg-gradient-to-b from-[#0a0a0f] to-[#1a1a2e]">
-      {/* Background decoration */}
-      <div className="absolute inset-0 opacity-30">
-        <div className="absolute top-20 right-20 w-72 h-72 bg-purple-600/20 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 left-20 w-72 h-72 bg-pink-600/20 rounded-full blur-3xl"></div>
-      </div>
-
+    <section id="projects" className="relative py-20 px-6 overflow-hidden bg-gradient-to-b from-[#0a0a0f] via-[#0f0f1a] to-[#0a0a0f]">
       <div className="relative z-10 max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-              Featured Projects
-            </span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-purple-400 tracking-tight">
+            Featured Projects
           </h2>
           <div className="flex justify-center mt-4">
-            <div className="w-20 h-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full"></div>
+            <div className="w-20 h-1 bg-purple-500/20 rounded-full"></div>
           </div>
         </div>
 
@@ -64,18 +56,33 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="group relative bg-white/5 backdrop-blur-sm rounded-xl overflow-hidden border border-white/10 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:-translate-y-2"
+              className="group relative bg-white/5 backdrop-blur-sm rounded-xl overflow-hidden border border-white/10 hover:border-purple-500/30 transition-all duration-300 hover:transform hover:-translate-y-2"
             >
               {/* Project Image Placeholder (optional) */}
-              <div className="h-48 bg-gradient-to-br from-purple-900/20 to-pink-900/20 flex items-center justify-center border-b border-white/10">
-                <div className="text-6xl opacity-20 group-hover:opacity-30 transition-opacity">
-                  <FiCode className="w-16 h-16 text-purple-400" />
+              <div className="h-48 bg-purple-900/10 flex items-center justify-center border-b border-white/10 relative overflow-hidden group/img">
+                {/* Animated Grid Overlay */}
+                <div 
+                  className="absolute inset-0 opacity-[0.03] transition-opacity group-hover:opacity-[0.07]" 
+                  style={{
+                    backgroundImage: `
+                      linear-gradient(rgba(168, 85, 247, 0.5) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(168, 85, 247, 0.5) 1px, transparent 1px)
+                    `,
+                    backgroundSize: '20px 20px'
+                  }}
+                ></div>
+                
+                {/* Subtle Moving Light Effect */}
+                <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-purple-500/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+
+                <div className="text-6xl opacity-20 relative z-10 group-hover:scale-110 transition-transform duration-500">
+                  <FiCode className="w-16 h-16 text-purple-400/50 group-hover:text-purple-400" />
                 </div>
               </div>
 
               {/* Content */}
               <div className="p-6">
-                <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-pink-400 transition-all">
+                <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-purple-300 transition-all">
                   {project.title}
                 </h3>
                 
@@ -88,7 +95,7 @@ const Projects = () => {
                   {project.tech.map((tech, i) => (
                     <span
                       key={i}
-                      className="px-3 py-1 text-xs bg-purple-500/10 text-purple-400 rounded-full border border-purple-500/20"
+                      className="px-3 py-1 text-xs bg-purple-500/10 text-purple-300 rounded-full border border-purple-500/10"
                     >
                       {tech}
                     </span>
@@ -103,7 +110,7 @@ const Projects = () => {
                       href={project.liveDemo}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg font-medium text-white hover:opacity-90 transition-opacity group/btn"
+                      className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-purple-500/20 text-purple-300 rounded-lg font-medium hover:bg-purple-500/30 transition-all group/btn"
                     >
                       <FiExternalLink className="w-4 h-4 group-hover/btn:scale-110 transition-transform" />
                       Live Demo
@@ -114,7 +121,7 @@ const Projects = () => {
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-white/5 border border-white/10 rounded-lg font-medium text-white hover:bg-white/10 hover:border-purple-500/50 transition-all group/btn"
+                      className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-white/5 border border-white/10 rounded-lg font-medium text-white hover:bg-white/10 hover:border-purple-500/30 transition-all group/btn"
                     >
                       <FiGithub className="w-4 h-4 group-hover/btn:scale-110 transition-transform" />
                       View Code
@@ -125,17 +132,12 @@ const Projects = () => {
                   {!project.isPortfolio && (
                     <button
                       onClick={() => window.open(project.github, '_blank')}
-                      className="px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white hover:bg-white/10 hover:border-purple-500/50 transition-all"
+                      className="px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white hover:bg-white/10 hover:border-purple-500/30 transition-all"
                     >
                       <FiExternalLink className="w-4 h-4" />
                     </button>
                   )}
                 </div>
-              </div>
-
-              {/* Decorative corner accent */}
-              <div className="absolute top-0 right-0 w-20 h-20">
-                <div className="absolute top-0 right-0 w-10 h-10 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-bl-3xl"></div>
               </div>
             </div>
           ))}
@@ -147,7 +149,7 @@ const Projects = () => {
             href="https://github.com/Papadizzo"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-white/5 border border-white/10 rounded-lg text-gray-300 hover:text-white hover:border-purple-500/50 transition-all"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-white/5 border border-white/10 rounded-lg text-gray-300 hover:text-purple-300 hover:border-purple-500/30 transition-all"
           >
             <FiGithub className="w-5 h-5" />
             View All on GitHub

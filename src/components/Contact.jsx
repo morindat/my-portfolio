@@ -106,7 +106,7 @@ const Contact = () => {
   return (
     <section id="contact" className="relative min-h-screen py-20 px-6 overflow-hidden">
       {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#0a0a0f] via-[#1a0f1f] to-[#2d1b2d]">
+      <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0f] to-[#1a1a2e]">
         {/* Animated Grid */}
         <div 
           className="absolute inset-0 animate-grid" 
@@ -134,10 +134,6 @@ const Contact = () => {
             />
           ))}
         </div>
-        
-        {/* Glowing Orbs */}
-        <div className="absolute top-0 -left-20 w-96 h-96 bg-purple-600/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-0 -right-20 w-96 h-96 bg-pink-600/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
       </div>
 
       {/* Content */}

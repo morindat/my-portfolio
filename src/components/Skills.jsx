@@ -52,8 +52,8 @@ const Skills = () => {
       
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="mb-16 text-center">
-          <h2 className="text-4xl sm:text-5xl font-bold mb-4">
-            Skills & <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">Technologies</span>
+          <h2 className="text-4xl sm:text-5xl font-bold mb-4 text-white">
+            Skills & Technologies
           </h2>
         </div>
 

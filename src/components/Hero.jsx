@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
-import profileFront from "../assets/Pops.jpg";
-import profileBack from "../assets/Papaa.jpg";
+import profileImg from "../assets/Papaa.jpg";
 
 const roles = [
     "Web Developer",
@@ -13,7 +12,6 @@ const Hero = () => {
   const [text, setText] = useState("");
   const [index, setIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
-  const [isFlipped, setIsFlipped] = useState(false);
 
 
   useEffect(() => {
@@ -60,13 +58,11 @@ const Hero = () => {
           {/* Left Side: Text Content */}
           <div className="order-2 lg:order-1">
 
-            <p className="text-purple-400 text-3xl sm:text-4xl lg:text-5xl mb-6 font-bold break-words"
-               style={{ fontFamily: "'Comic Sans MS', 'Chalkboard SE', 'Marker Felt', sans-serif" }}>
+            <p className="text-purple-400 text-3xl sm:text-4xl lg:text-5xl mb-6 font-bold break-words uppercase tracking-wider">
               HELLO,
             </p>
 
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 leading-tight break-words"
-                style={{ fontFamily: "'Comic Sans MS', 'Chalkboard SE', 'Marker Felt', sans-serif" }}>
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 leading-tight break-words uppercase">
               It's Morindat,
             </h1>
 
@@ -80,11 +76,10 @@ const Hero = () => {
               <span className="w-3 h-8 bg-purple-400 animate-pulse shrink-0"></span>
             </div>
 
-            <p className="text-gray-400 text-lg sm:text-xl lg:text-2xl leading-relaxed mb-8 max-w-xl"
-               style={{ fontFamily: "'Amatic SC', cursive", fontWeight: "400" }}>
+            <p className="text-gray-400 text-lg sm:text-xl lg:text-2xl leading-relaxed mb-8 max-w-xl font-light">
               A personal website of an aspiring {" "}
               <span className="text-white font-bold">"software engineer"</span>{" "}
-               Building cool stuffs one line at a time.
+               Building cool stuff one line at a time.
             </p>
 
             <div className="flex flex-wrap gap-4">
@@ -104,71 +99,27 @@ const Hero = () => {
 
           </div>
 
-          {/* Right Side: Flip Card */}
+          {/* Right Side: Static Profile Image */}
           <div className="order-1 lg:order-2 flex justify-center lg:justify-end items-center">
-            <div
-              className="relative w-64 h-80 sm:w-72 sm:h-96 cursor-pointer group"
-              onClick={() => setIsFlipped(!isFlipped)}
-              onMouseEnter={() => setIsFlipped(true)}
-              onMouseLeave={() => setIsFlipped(false)}
-            >
-              {/* Card Container */}
-              <div 
-                className={`relative w-full h-full transition-all duration-700 ${
-                  isFlipped ? 'rotate-y-180' : ''
-                }`}
-                style={{
-                  transformStyle: 'preserve-3d',
-                  transform: isFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)'
-                }}
-              >
-                
-                {/* Front of Card */}
-                <div 
-                  className="absolute inset-0 w-full h-full rounded-2xl overflow-hidden shadow-2xl shadow-purple-500/20 border-2 border-purple-500/30"
-                  style={{ backfaceVisibility: 'hidden' }}
-                >
+            <div className="relative w-64 h-80 sm:w-72 sm:h-96 group">
+                <div className="absolute inset-0 bg-purple-500/20 blur-2xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl shadow-purple-500/20 border-2 border-purple-500/30">
                   <img 
-                    src={profileFront} 
-                    alt="Profile Front - Morindat" 
-                    className="w-full h-full object-cover"
+                    src={profileImg} 
+                    alt="Morindat" 
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     onError={(e) => {
                       e.target.onerror = null;
                       e.target.src = 'https://via.placeholder.com/400x500/1a0f1a/ffffff?text=Morindat';
                     }}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-purple-900/60 to-transparent"></div>
-                  <div className="absolute bottom-4 left-4 right-4">
-                    <p className="text-white font-bold text-xl">Morindat</p>
-                    <p className="text-purple-300 text-sm">Developer</p>
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0f]/80 to-transparent"></div>
+                  <div className="absolute bottom-6 left-6 right-6">
+                    <p className="text-white font-bold text-2xl tracking-tighter uppercase font-heading">Morindat</p>
+                    <p className="text-purple-400 text-sm font-medium tracking-widest font-mono">DEVELOPER</p>
                   </div>
                 </div>
-
-                {/* Back of Card */}
-                <div 
-                  className="absolute inset-0 w-full h-full rounded-2xl overflow-hidden shadow-2xl shadow-pink-500/20 border-2 border-pink-500/30 bg-[#0a0a0f]"
-                  style={{ 
-                    backfaceVisibility: 'hidden',
-                    transform: 'rotateY(180deg)'
-                  }}
-                >
-                  <img 
-                    src={profileBack} 
-                    alt="Profile Back - Morindat" 
-                    className="absolute inset-0 w-full h-full object-cover"
-                    onError={(e) => {
-                      e.target.onerror = null;
-                      e.target.src = 'https://via.placeholder.com/400x500/0a0a0f/ffffff?text=Back+View';
-                    }}
-                  />
-                </div>
-
-              </div>
             </div>
-            
-            {/* Hint text - changes based on device */}
-            <p className="absolute -bottom-8 text-gray-500 text-sm hidden lg:block">Hover to flip</p>
-            <p className="absolute -bottom-8 text-gray-500 text-sm lg:hidden">Tap to flip</p>
           </div>
 
         </div>
