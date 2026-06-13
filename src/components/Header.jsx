@@ -113,7 +113,7 @@ const Header = () => {
             <FaEnvelope />
           </a>
           <a
-            href="https://github.com/Papadizzo"
+            href="https://github.com/morindat"
             target="_blank"
             rel="noopener noreferrer"
             className="header-social-link"
