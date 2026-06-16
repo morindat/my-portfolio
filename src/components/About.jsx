@@ -1,4 +1,5 @@
 import React from 'react';
+import Terminal from './Terminal';
 
 const About = () => {
   const softwareSkills = [
@@ -29,21 +30,30 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="min-h-screen py-20 px-6 bg-gradient-to-b from-[#0a0a0f] to-[#1a1a2e]">
+    <section id="about" className="min-h-screen py-20 px-6 bg-black border-t border-white/5">
       <div className="max-w-6xl mx-auto">
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-blue-400 tracking-tight">
+            About Me
+          </h2>
+          <div className="flex justify-center mt-4">
+            <div className="w-20 h-1 bg-blue-500/20 rounded-full"></div>
+          </div>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-12 mb-20">
           
           {/* Left Column */}
           <div className="space-y-8">
             {/* Software Skills */}
-            <div className="bg-white/5 p-6 rounded-lg backdrop-blur-sm">
-              <h2 className="text-xl font-bold mb-6 text-purple-400 tracking-wide border-b border-gray-700 pb-2">
+            <div className="bg-white/5 p-6 rounded-lg backdrop-blur-sm border border-white/5 hover:border-blue-500/20 transition-all group">
+              <h2 className="text-xl font-bold mb-6 text-blue-400 tracking-wide border-b border-gray-700 pb-2">
                 SOFTWARE SKILLS
               </h2>
               <div className="grid grid-cols-2 gap-4">
                 {softwareSkills.map((skill, index) => (
                   <div key={index} className="flex items-center gap-2">
-                    <span className="text-purple-400">▹</span>
+                    <span className="text-blue-400">▹</span>
                     <span className="text-gray-300">{skill}</span>
                   </div>
                 ))}
@@ -51,8 +61,8 @@ const About = () => {
             </div>
 
             {/* Languages */}
-            <div className="bg-white/5 p-6 rounded-lg backdrop-blur-sm">
-              <h2 className="text-xl font-bold mb-6 text-purple-400 tracking-wide border-b border-gray-700 pb-2">
+            <div className="bg-white/5 p-6 rounded-lg backdrop-blur-sm border border-white/5 hover:border-blue-500/20 transition-all group">
+              <h2 className="text-xl font-bold mb-6 text-blue-400 tracking-wide border-b border-gray-700 pb-2">
                 LANGUAGES
               </h2>
               <div className="space-y-4">
@@ -66,15 +76,15 @@ const About = () => {
             </div>
 
             {/* Personal Skills */}
-            <div className="bg-white/5 p-6 rounded-lg backdrop-blur-sm">
-              <h2 className="text-xl font-bold mb-4 text-purple-400 tracking-wide border-b border-gray-700 pb-2">
+            <div className="bg-white/5 p-6 rounded-lg backdrop-blur-sm border border-white/5 hover:border-blue-500/20 transition-all group">
+              <h2 className="text-xl font-bold mb-4 text-blue-400 tracking-wide border-b border-gray-700 pb-2">
                 PERSONAL SKILLS
               </h2>
               <div className="flex flex-wrap gap-3">
                 {personalSkills.map((skill, index) => (
                   <span 
                     key={index}
-                    className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm"
+                    className="px-3 py-1 bg-blue-500/20 text-slate-300 rounded-full text-sm"
                   >
                     {skill}
                   </span>
@@ -86,14 +96,14 @@ const About = () => {
           {/* Right Column */}
           <div className="space-y-8">
             {/* Experience */}
-            <div className="bg-white/5 p-6 rounded-lg backdrop-blur-sm">
-              <h2 className="text-xl font-bold mb-6 text-purple-400 tracking-wide border-b border-gray-700 pb-2">
+            <div className="bg-white/5 p-6 rounded-lg backdrop-blur-sm border border-white/5 hover:border-blue-500/20 transition-all group">
+              <h2 className="text-xl font-bold mb-6 text-blue-400 tracking-wide border-b border-gray-700 pb-2">
                 EXPERIENCE
               </h2>
               <div className="space-y-6">
                 {experiences.map((exp, index) => (
-                  <div key={index} className="relative pl-6 border-l-2 border-purple-500/30">
-                    <div className="absolute w-3 h-3 bg-purple-500 rounded-full -left-[7px] top-1"></div>
+                  <div key={index} className="relative pl-6 border-l-2 border-blue-500/30">
+                    <div className="absolute w-3 h-3 bg-blue-500 rounded-full -left-[7px] top-1"></div>
                     <h3 className="text-white font-semibold">
                       {exp.company}
                     </h3>
@@ -109,12 +119,12 @@ const About = () => {
             </div>
 
             {/* Education */}
-            <div className="bg-white/5 p-6 rounded-lg backdrop-blur-sm">
-              <h2 className="text-xl font-bold mb-4 text-purple-400 tracking-wide border-b border-gray-700 pb-2">
+            <div className="bg-white/5 p-6 rounded-lg backdrop-blur-sm border border-white/5 hover:border-blue-500/20 transition-all group">
+              <h2 className="text-xl font-bold mb-4 text-blue-400 tracking-wide border-b border-gray-700 pb-2">
                 EDUCATION
               </h2>
-              <div className="pl-6 border-l-2 border-purple-500/30 relative">
-                <div className="absolute w-3 h-3 bg-purple-500 rounded-full -left-[7px] top-1"></div>
+              <div className="pl-6 border-l-2 border-blue-500/30 relative">
+                <div className="absolute w-3 h-3 bg-blue-500 rounded-full -left-[7px] top-1"></div>
                 <p className="text-white font-semibold">
                   BSc/Hon in Computer Science
                 </p>
@@ -124,6 +134,14 @@ const About = () => {
               </div>
             </div>
           </div>
+        </div>
+
+        {/* Terminal Section */}
+        <div className="mt-20">
+          <div className="text-center mb-8">
+            <h3 className="text-xl font-mono text-gray-500 uppercase tracking-[0.3em]">System Interface</h3>
+          </div>
+          <Terminal />
         </div>
       </div>
     </section>

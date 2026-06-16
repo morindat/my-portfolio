@@ -45,21 +45,18 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="py-20 px-6 bg-gradient-to-b from-[#0a0a0f] via-[#0f0f1a] to-[#0a0a0f] relative">
-      
-      {/* Subtle top glow to connect with Hero */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-purple-600/10 blur-[120px] rounded-full pointer-events-none"></div>
+    <section id="skills" className="py-20 px-6 bg-black border-t border-white/5 relative">
       
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="mb-16 text-center">
-          <h2 className="text-4xl sm:text-5xl font-bold mb-4 text-white">
+          <h2 className="text-4xl sm:text-5xl font-bold mb-4 text-blue-400">
             Skills & Technologies
           </h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20">
           <div>
-            <h3 className="text-xl font-bold mb-8 text-purple-400 border-b border-white/10 pb-2 inline-block">
+            <h3 className="text-xl font-bold mb-8 text-white border-b border-white/10 pb-2 inline-block">
               Languages & Core
             </h3>
             <div className="space-y-6">
@@ -70,7 +67,7 @@ const Skills = () => {
           </div>
 
           <div>
-            <h3 className="text-xl font-bold mb-8 text-pink-400 border-b border-white/10 pb-2 inline-block">
+            <h3 className="text-xl font-bold mb-8 text-white border-b border-white/10 pb-2 inline-block">
               Frameworks, Tools & Libraries
             </h3>
             <div className="space-y-6">
@@ -81,11 +78,38 @@ const Skills = () => {
           </div>
         </div>
 
+        <div className="mt-20 pt-8 border-t border-white/10">
+          <div className="text-center mb-12">
+            <h3 className="text-2xl sm:text-3xl font-bold">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-400 to-blue-400">
+                GitHub Activity
+              </span>
+            </h3>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center justify-center">
+            <div className="flex justify-center">
+              <img 
+                src="https://github-readme-stats.vercel.app/api?username=morindat&show_icons=true&theme=dark&hide_border=true&bg_color=000000&title_color=3b82f6&text_color=94a3b8&icon_color=3b82f6" 
+                alt="GitHub Stats"
+                className="w-full max-w-md hover:scale-[1.02] transition-transform duration-500"
+              />
+            </div>
+            <div className="flex justify-center">
+              <img 
+                src="https://github-readme-stats.vercel.app/api/top-langs/?username=morindat&layout=compact&theme=dark&hide_border=true&bg_color=000000&title_color=3b82f6&text_color=94a3b8&icon_color=3b82f6" 
+                alt="Top Languages"
+                className="w-full max-w-md hover:scale-[1.02] transition-transform duration-500"
+              />
+            </div>
+          </div>
+        </div>
+
         {/* Course Work Marquee Section */}
         <div className="mt-20 pt-8 border-t border-white/10">
           <div className="text-center mb-8">
             <h3 className="text-2xl sm:text-3xl font-bold">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-400 to-blue-400">
                 Relevant Course Work
               </span>
             </h3>
@@ -98,7 +122,7 @@ const Skills = () => {
                 <span key={idx} className="inline-block mx-4 text-lg md:text-xl text-gray-300 font-medium">
                   {course}
                   {idx < courses.length - 1 && (
-                    <span className="mx-6 text-purple-500 text-2xl font-bold">|</span>
+                    <span className="mx-6 text-blue-500 text-2xl font-bold">|</span>
                   )}
                 </span>
               ))}
@@ -135,7 +159,7 @@ const SkillBar = ({ name, level, icon }) => {
   return (
     <div className="group">
       <div className="flex items-center gap-4 mb-2">
-        <div className="w-10 h-10 border border-gray-700 rounded-lg flex items-center justify-center text-gray-400 text-xl group-hover:border-purple-500 group-hover:text-purple-400 transition-colors bg-white/5">
+        <div className="w-10 h-10 border border-gray-700 rounded-lg flex items-center justify-center text-gray-400 text-xl group-hover:border-blue-500 group-hover:text-blue-400 transition-colors bg-white/5">
           {icon}
         </div>
         <div className="flex-1 flex justify-between items-center">
@@ -145,10 +169,10 @@ const SkillBar = ({ name, level, icon }) => {
       </div>
       <div className="h-[2px] bg-gray-800 rounded-full relative ml-14">
         <div 
-          className="h-full bg-gradient-to-r from-purple-600 to-pink-600 rounded-full relative transition-all duration-1000 ease-out"
+          className="h-full bg-gradient-to-r from-slate-500 to-blue-600 rounded-full relative transition-all duration-1000 ease-out"
           style={{ width: `${level}%` }}
         >
-          <div className="absolute right-0 top-1/2 -translate-y-1/2 w-3 h-3 bg-[#0a0a0f] border-2 border-purple-500 rounded-full shadow-lg shadow-purple-500/50"></div>
+          <div className="absolute right-0 top-1/2 -translate-y-1/2 w-3 h-3 bg-black border-2 border-blue-500 rounded-full shadow-lg shadow-blue-500/50"></div>
         </div>
       </div>
     </div>

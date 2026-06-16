@@ -12,8 +12,8 @@ const Logo = ({ width = 40, height = 40 }) => {
     >
       <defs>
         <linearGradient id="scannerGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stopColor="#a855f7" />
-          <stop offset="100%" stopColor="#0ea5e9" />
+          <stop offset="0%" stopColor="#94a3b8" />
+          <stop offset="100%" stopColor="#3b82f6" />
         </linearGradient>
       </defs>
       <rect 
@@ -54,7 +54,7 @@ const Logo = ({ width = 40, height = 40 }) => {
       >
         JD
       </text>
-      <circle cx="170" cy="30" r="5" fill="#0ea5e9">
+      <circle cx="170" cy="30" r="5" fill="#3b82f6">
         <animate 
           attributeName="r" 
           values="5;8;5" 

@@ -38,13 +38,13 @@ const Skills = () => {
           <div className="space-y-8">
             {/* Software Skills */}
             <div className="bg-white/5 p-6 rounded-lg backdrop-blur-sm">
-              <h2 className="text-xl font-bold mb-6 text-purple-400 tracking-wide border-b border-gray-700 pb-2">
+              <h2 className="text-xl font-bold mb-6 text-blue-400 tracking-wide border-b border-gray-700 pb-2">
                 SOFTWARE SKILLS
               </h2>
               <div className="grid grid-cols-2 gap-4">
                 {softwareSkills.map((skill, index) => (
                   <div key={index} className="flex items-center gap-2">
-                    <span className="text-purple-400">▹</span>
+                    <span className="text-blue-400">▹</span>
                     <span className="text-gray-300">{skill}</span>
                   </div>
                 ))}
@@ -53,7 +53,7 @@ const Skills = () => {
 
             {/* Languages */}
             <div className="bg-white/5 p-6 rounded-lg backdrop-blur-sm">
-              <h2 className="text-xl font-bold mb-6 text-purple-400 tracking-wide border-b border-gray-700 pb-2">
+              <h2 className="text-xl font-bold mb-6 text-blue-400 tracking-wide border-b border-gray-700 pb-2">
                 LANGUAGES
               </h2>
               <div className="space-y-4">
@@ -68,14 +68,14 @@ const Skills = () => {
 
             {/* Personal Skills */}
             <div className="bg-white/5 p-6 rounded-lg backdrop-blur-sm">
-              <h2 className="text-xl font-bold mb-4 text-purple-400 tracking-wide border-b border-gray-700 pb-2">
+              <h2 className="text-xl font-bold mb-4 text-blue-400 tracking-wide border-b border-gray-700 pb-2">
                 PERSONAL SKILLS
               </h2>
               <div className="flex flex-wrap gap-3">
                 {personalSkills.map((skill, index) => (
                   <span 
                     key={index}
-                    className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm"
+                    className="px-3 py-1 bg-blue-500/20 text-slate-300 rounded-full text-sm"
                   >
                     {skill}
                   </span>
@@ -88,13 +88,13 @@ const Skills = () => {
           <div className="space-y-8">
             {/* Experience */}
             <div className="bg-white/5 p-6 rounded-lg backdrop-blur-sm">
-              <h2 className="text-xl font-bold mb-6 text-purple-400 tracking-wide border-b border-gray-700 pb-2">
+              <h2 className="text-xl font-bold mb-6 text-blue-400 tracking-wide border-b border-gray-700 pb-2">
                 EXPERIENCE
               </h2>
               <div className="space-y-6">
                 {experiences.map((exp, index) => (
-                  <div key={index} className="relative pl-6 border-l-2 border-purple-500/30">
-                    <div className="absolute w-3 h-3 bg-purple-500 rounded-full -left-[7px] top-1"></div>
+                  <div key={index} className="relative pl-6 border-l-2 border-blue-500/30">
+                    <div className="absolute w-3 h-3 bg-blue-500 rounded-full -left-[7px] top-1"></div>
                     <h3 className="text-white font-semibold">
                       {exp.company}
                     </h3>
@@ -111,11 +111,11 @@ const Skills = () => {
 
             {/* Education */}
             <div className="bg-white/5 p-6 rounded-lg backdrop-blur-sm">
-              <h2 className="text-xl font-bold mb-4 text-purple-400 tracking-wide border-b border-gray-700 pb-2">
+              <h2 className="text-xl font-bold mb-4 text-blue-400 tracking-wide border-b border-gray-700 pb-2">
                 EDUCATION
               </h2>
-              <div className="pl-6 border-l-2 border-purple-500/30 relative">
-                <div className="absolute w-3 h-3 bg-purple-500 rounded-full -left-[7px] top-1"></div>
+              <div className="pl-6 border-l-2 border-blue-500/30 relative">
+                <div className="absolute w-3 h-3 bg-blue-500 rounded-full -left-[7px] top-1"></div>
                 <p className="text-white font-semibold">
                   BS/MS in Computer Science
                 </p>

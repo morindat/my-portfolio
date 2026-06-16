@@ -17,7 +17,7 @@ const Contact = () => {
       label: "Email",
       value: "papaadennis@gmail.com",
       link: "mailto:papaadennis@gmail.com",
-      color: "from-purple-500 to-pink-500"
+      color: "from-slate-400 to-blue-500"
     },
     {
       icon: <FiMessageCircle className="w-6 h-6" />,
@@ -31,7 +31,7 @@ const Contact = () => {
       label: "Location",
       value: "New Delhi, IND",
       link: "https://maps.google.com/?q=New+Delhi+India",
-      color: "from-blue-500 to-purple-500"
+      color: "from-blue-500 to-blue-500"
     }
   ];
 
@@ -39,10 +39,10 @@ const Contact = () => {
     {
       icon: <FiGithub className="w-5 h-5" />,
       name: "GitHub",
-      username: "@Papadizzo",
-      link: "https://github.com/Papadizzo",
-      color: "hover:bg-purple-500/20",
-      borderColor: "group-hover:border-purple-500"
+      username: "@morindat",
+      link: "https://github.com/morindat",
+      color: "hover:bg-blue-500/20",
+      borderColor: "group-hover:border-blue-500"
     },
     {
       icon: <FiLinkedin className="w-5 h-5" />,
@@ -57,8 +57,8 @@ const Contact = () => {
       name: "Instagram",
       username: "@justindizzo17",
       link: "https://www.instagram.com/justindizzo17?igsh=cnk1b21jZHdpenF1",
-      color: "hover:bg-pink-500/20",
-      borderColor: "group-hover:border-pink-500"
+      color: "hover:bg-blue-500/20",
+      borderColor: "group-hover:border-blue-500"
     }
   ];
 
@@ -104,16 +104,16 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="relative min-h-screen py-20 px-6 overflow-hidden">
+    <section id="contact" className="relative min-h-screen py-20 px-6 overflow-hidden bg-black border-t border-white/5">
       {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0f] to-[#1a1a2e]">
+      <div className="absolute inset-0">
         {/* Animated Grid */}
         <div 
           className="absolute inset-0 animate-grid" 
           style={{
             backgroundImage: `
-              linear-gradient(rgba(168, 85, 247, 0.05) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(168, 85, 247, 0.05) 1px, transparent 1px)
+              linear-gradient(rgba(245, 158, 11, 0.05) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(245, 158, 11, 0.05) 1px, transparent 1px)
             `,
             backgroundSize: '50px 50px'
           }}
@@ -124,7 +124,7 @@ const Contact = () => {
           {[...Array(20)].map((_, i) => (
             <div
               key={i}
-              className="absolute w-1 h-1 bg-purple-500/20 rounded-full animate-particle"
+              className="absolute w-1 h-1 bg-blue-500/20 rounded-full animate-particle"
               style={{
                 top: `${Math.random() * 100}%`,
                 left: `${Math.random() * 100}%`,
@@ -141,7 +141,7 @@ const Contact = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-5xl md:text-6xl font-bold mb-4">
-            <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent bg-300% animate-gradient">
+            <span className="bg-gradient-to-r from-slate-400 via-blue-500 to-blue-400 bg-clip-text text-transparent bg-300% animate-gradient">
               Let's Connect
             </span>
           </h2>
@@ -152,7 +152,7 @@ const Contact = () => {
           
           {/* Decorative Line */}
           <div className="flex justify-center mt-6">
-            <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full"></div>
+            <div className="w-24 h-1 bg-gradient-to-r from-slate-400 to-blue-500 rounded-full"></div>
           </div>
         </div>
 
@@ -165,7 +165,7 @@ const Contact = () => {
                 <a
                   key={index}
                   href={info.link}
-                  className="group relative bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:-translate-y-2 block"
+                  className="group relative bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:-translate-y-2 block"
                   // Only open new tab for http links (not mailto/tel)
                   target={info.link.startsWith("http") ? "_blank" : undefined}
                   rel={info.link.startsWith("http") ? "noopener noreferrer" : undefined}
@@ -181,7 +181,7 @@ const Contact = () => {
                   <div className={`absolute inset-0 bg-gradient-to-r ${info.color} opacity-0 group-hover:opacity-10 rounded-xl transition-opacity duration-300`}></div>
                   
                   <div className="relative">
-                    <div className="text-purple-400 mb-3 group-hover:scale-110 transition-transform duration-300">
+                    <div className="text-blue-400 mb-3 group-hover:scale-110 transition-transform duration-300">
                       {info.icon}
                     </div>
                     <h3 className="text-white font-semibold mb-1">{info.label}</h3>
@@ -194,7 +194,7 @@ const Contact = () => {
                         e.stopPropagation();
                         handleCopy(info.value, info.label);
                       }}
-                      className="flex items-center gap-1 text-xs text-gray-500 hover:text-purple-400 transition-colors"
+                      className="flex items-center gap-1 text-xs text-gray-500 hover:text-blue-400 transition-colors"
                     >
                       {copied === info.label ? (
                         <>
@@ -224,10 +224,10 @@ const Contact = () => {
                     className={`group relative p-4 rounded-lg border border-white/10 ${social.color} transition-all duration-300 overflow-hidden`}
                   >
                     {/* Animated Background */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-purple-500/0 to-pink-500/0 group-hover:from-purple-500/10 group-hover:to-pink-500/10 transition-all duration-500"></div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-slate-400/0 to-blue-500/0 group-hover:from-slate-400/10 group-hover:to-blue-500/10 transition-all duration-500"></div>
                     
                     <div className="relative flex items-center gap-3">
-                      <div className={`text-gray-400 group-hover:text-purple-400 transition-colors duration-300 ${social.borderColor}`}>
+                      <div className={`text-gray-400 group-hover:text-blue-400 transition-colors duration-300 ${social.borderColor}`}>
                         {social.icon}
                       </div>
                       <div>
@@ -237,7 +237,7 @@ const Contact = () => {
                     </div>
 
                     {/* Hover Animation Line */}
-                    <div className={`absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-500 to-pink-500 group-hover:w-full transition-all duration-300`}></div>
+                    <div className={`absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-slate-400 to-blue-500 group-hover:w-full transition-all duration-300`}></div>
                   </a>
                 ))}
               </div>
@@ -264,7 +264,7 @@ const Contact = () => {
                   ? 'bg-green-500/20 border border-green-500/50 text-green-300' 
                   : submitStatus === 'error'
                   ? 'bg-red-500/20 border border-red-500/50 text-red-300'
-                  : 'bg-purple-500/20 border border-purple-500/50 text-purple-300'
+                  : 'bg-blue-500/20 border border-blue-500/50 text-slate-300'
               }`}>
                 {submitStatus === 'sending' && '📤 Sending your message...'}
                 {submitStatus === 'success' && '✅ Message sent! I\'ll get back to you soon.'}
@@ -284,7 +284,7 @@ const Contact = () => {
               
               {/* Name Input */}
               <div className="group">
-                <label className="block text-gray-400 text-sm mb-2 group-focus-within:text-purple-400 transition-colors">
+                <label className="block text-gray-400 text-sm mb-2 group-focus-within:text-blue-400 transition-colors">
                   Your Name
                 </label>
                 <div className="relative">
@@ -294,16 +294,16 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-purple-500 transition-colors"
+                    className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-blue-500 transition-colors"
                     placeholder="John Doe"
                   />
-                  <div className="absolute inset-0 border border-purple-500 rounded-lg opacity-0 group-focus-within:opacity-100 transition-opacity pointer-events-none"></div>
+                  <div className="absolute inset-0 border border-blue-500 rounded-lg opacity-0 group-focus-within:opacity-100 transition-opacity pointer-events-none"></div>
                 </div>
               </div>
 
               {/* Email Input */}
               <div className="group">
-                <label className="block text-gray-400 text-sm mb-2 group-focus-within:text-purple-400 transition-colors">
+                <label className="block text-gray-400 text-sm mb-2 group-focus-within:text-blue-400 transition-colors">
                   Email Address
                 </label>
                 <div className="relative">
@@ -313,16 +313,16 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-purple-500 transition-colors"
+                    className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-blue-500 transition-colors"
                     placeholder="john@example.com"
                   />
-                  <div className="absolute inset-0 border border-purple-500 rounded-lg opacity-0 group-focus-within:opacity-100 transition-opacity pointer-events-none"></div>
+                  <div className="absolute inset-0 border border-blue-500 rounded-lg opacity-0 group-focus-within:opacity-100 transition-opacity pointer-events-none"></div>
                 </div>
               </div>
 
               {/* Message Input */}
               <div className="group">
-                <label className="block text-gray-400 text-sm mb-2 group-focus-within:text-purple-400 transition-colors">
+                <label className="block text-gray-400 text-sm mb-2 group-focus-within:text-blue-400 transition-colors">
                   Your Message
                 </label>
                 <div className="relative">
@@ -332,10 +332,10 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     rows="5"
-                    className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-purple-500 transition-colors resize-none"
+                    className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-blue-500 transition-colors resize-none"
                     placeholder="Tell me about your project..."
                   />
-                  <div className="absolute inset-0 border border-purple-500 rounded-lg opacity-0 group-focus-within:opacity-100 transition-opacity pointer-events-none"></div>
+                  <div className="absolute inset-0 border border-blue-500 rounded-lg opacity-0 group-focus-within:opacity-100 transition-opacity pointer-events-none"></div>
                 </div>
               </div>
 
@@ -343,11 +343,11 @@ const Contact = () => {
               <button
                 type="submit"
                 disabled={submitStatus === 'sending'}
-                className={`group relative w-full py-4 px-6 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg font-semibold text-white overflow-hidden transition-opacity ${
+                className={`group relative w-full py-4 px-6 bg-gradient-to-r from-slate-500 to-blue-600 rounded-lg font-semibold text-white overflow-hidden transition-opacity ${
                   submitStatus === 'sending' ? 'opacity-70 cursor-not-allowed' : ''
                 }`}
               >
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-pink-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-slate-400 to-blue-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <span className="relative flex items-center justify-center gap-2">
                   {submitStatus === 'sending' ? (
                     <>

@@ -45,11 +45,7 @@ const Hero = () => {
   };
 
   return (
-    <section id="hero" className="min-h-screen flex items-center relative overflow-hidden bg-gradient-to-br from-[#0a0a0f] via-[#0f0f1a] to-[#1a0f1a]">
-
-      {/* Subtle animated background blobs */}
-      <div className="absolute top-20 left-10 w-72 h-72 bg-purple-600/20 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
-      <div className="absolute bottom-20 right-10 w-96 h-96 bg-pink-600/10 rounded-full mix-blend-multiply filter blur-3xl animate-pulse delay-1000"></div>
+    <section id="hero" className="min-h-screen flex items-center relative overflow-hidden bg-black">
 
       {/* Content Container */}
       <div className="max-w-6xl mx-auto w-full relative z-10 px-4 sm:px-6 pt-20 lg:pt-24 pb-12 lg:pb-16">
@@ -58,7 +54,7 @@ const Hero = () => {
           {/* Left Side: Text Content */}
           <div className="order-2 lg:order-1">
 
-            <p className="text-purple-400 text-3xl sm:text-4xl lg:text-5xl mb-6 font-bold break-words uppercase tracking-wider">
+            <p className="text-blue-400 text-3xl sm:text-4xl lg:text-5xl mb-6 font-bold break-words uppercase tracking-wider">
               HELLO,
             </p>
 
@@ -67,13 +63,13 @@ const Hero = () => {
             </h1>
 
             <div className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-medium mb-8 flex items-center gap-2 flex-wrap">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-400 to-blue-400">
                 A
               </span>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-400 to-blue-400">
                 {text}
               </span>
-              <span className="w-3 h-8 bg-purple-400 animate-pulse shrink-0"></span>
+              <span className="w-3 h-8 bg-blue-500 animate-pulse shrink-0"></span>
             </div>
 
             <p className="text-gray-400 text-lg sm:text-xl lg:text-2xl leading-relaxed mb-8 max-w-xl font-light">
@@ -85,7 +81,7 @@ const Hero = () => {
             <div className="flex flex-wrap gap-4">
               <a
                 href="#contact"
-                className="px-6 sm:px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg font-medium text-white hover:opacity-90 transition-opacity shadow-lg shadow-purple-500/25"
+                className="px-6 sm:px-8 py-3 bg-gradient-to-r from-slate-500 to-blue-600 rounded-lg font-medium text-white hover:opacity-90 transition-opacity shadow-lg shadow-blue-500/25"
               >
                 Get In Touch
               </a>
@@ -102,8 +98,7 @@ const Hero = () => {
           {/* Right Side: Static Profile Image */}
           <div className="order-1 lg:order-2 flex justify-center lg:justify-end items-center">
             <div className="relative w-64 h-80 sm:w-72 sm:h-96 group">
-                <div className="absolute inset-0 bg-purple-500/20 blur-2xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-                <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl shadow-purple-500/20 border-2 border-purple-500/30">
+                <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl border-2 border-white/10">
                   <img 
                     src={profileImg} 
                     alt="Morindat" 
@@ -116,7 +111,7 @@ const Hero = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0f]/80 to-transparent"></div>
                   <div className="absolute bottom-6 left-6 right-6">
                     <p className="text-white font-bold text-2xl tracking-tighter uppercase font-heading">Morindat</p>
-                    <p className="text-purple-400 text-sm font-medium tracking-widest font-mono">DEVELOPER</p>
+                    <p className="text-gray-400 text-sm font-medium tracking-widest font-mono">DEVELOPER</p>
                   </div>
                 </div>
             </div>
@@ -131,11 +126,11 @@ const Hero = () => {
         onClick={scrollToSkills}
       >
         <div className="flex flex-col items-center gap-1">
-          <span className="text-gray-500 text-xs font-mono tracking-wider opacity-70 group-hover:opacity-100 group-hover:text-purple-400 transition-all duration-300">
+          <span className="text-gray-500 text-xs font-mono tracking-wider opacity-70 group-hover:opacity-100 group-hover:text-blue-400 transition-all duration-300">
             SCROLL
           </span>
           <svg 
-            className="w-3 h-3 text-gray-500 animate-bounce opacity-70 group-hover:opacity-100 group-hover:text-purple-400 transition-all duration-300" 
+            className="w-3 h-3 text-gray-500 animate-bounce opacity-70 group-hover:opacity-100 group-hover:text-blue-400 transition-all duration-300" 
             fill="none" 
             stroke="currentColor" 
             viewBox="0 0 24 24"

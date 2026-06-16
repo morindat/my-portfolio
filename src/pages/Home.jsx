@@ -8,7 +8,7 @@ import Footer from "../components/Footer";
 
 const Home = () => {
     return (
-        <div className="min-h-screen bg-[#0a0a0f] text-white overflow-x-hidden font-body">
+        <div className="min-h-screen bg-black text-white overflow-x-hidden font-body">
             <Header />
             <Hero />
             <Skills />
