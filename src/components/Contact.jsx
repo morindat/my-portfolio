@@ -104,7 +104,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="relative min-h-screen py-20 px-6 overflow-hidden bg-black border-t border-white/5">
+    <section id="contact" className="relative min-h-[80vh] py-20 px-6 overflow-hidden bg-black border-t border-white/5">
       {/* Animated Background */}
       <div className="absolute inset-0">
         {/* Animated Grid */}

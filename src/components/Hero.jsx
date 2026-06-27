@@ -45,10 +45,10 @@ const Hero = () => {
   };
 
   return (
-    <section id="hero" className="min-h-screen flex items-center relative overflow-hidden bg-black">
+    <section id="hero" className="relative overflow-hidden bg-black">
 
       {/* Content Container */}
-      <div className="max-w-6xl mx-auto w-full relative z-10 px-4 sm:px-6 pt-20 lg:pt-24 pb-12 lg:pb-16">
+      <div className="max-w-6xl mx-auto w-full relative z-10 px-4 sm:px-6 pt-28 lg:pt-32 pb-12 lg:pb-14">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
 
           {/* Left Side: Text Content */}

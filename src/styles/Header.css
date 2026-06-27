@@ -46,23 +46,6 @@
   animation: scannerPulse 3s infinite;
 }
 
-/* Remove or comment out the old gradient-text styles if you're not using them */
-/* .gradient-text {
-  background: linear-gradient(90deg, #3b82f6 0%, #60a5fa 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
-  font-weight: bold;
-  letter-spacing: 2px;
-  text-shadow: 0 1px 10px rgba(106, 130, 251, 0.13);
-  transition: text-shadow 0.2s;
-}
-
-.header-logo:hover .gradient-text {
-  text-shadow: 0 2px 18px rgba(252, 92, 125, 0.22);
-} */
-
 /* Navigation Styles */
 .header-nav {
   display: flex;
