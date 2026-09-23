@@ -2,6 +2,7 @@ import {
   FaPython, FaJs, FaReact, FaNodeJs, FaGitAlt, 
   FaDatabase, FaHtml5, FaCss3Alt, FaCode, FaCog, FaMicrochip  
 } from "react-icons/fa";
+import GitHubStats from "./GitHubStats";
 
 const Skills = () => {
   const languages = [
@@ -87,22 +88,7 @@ const Skills = () => {
             </h3>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center justify-center">
-            <div className="flex justify-center">
-              <img 
-                src="https://github-readme-stats.vercel.app/api?username=morindat&show_icons=true&theme=dark&hide_border=true&bg_color=000000&title_color=3b82f6&text_color=94a3b8&icon_color=3b82f6" 
-                alt="GitHub Stats"
-                className="w-full max-w-md hover:scale-[1.02] transition-transform duration-500"
-              />
-            </div>
-            <div className="flex justify-center">
-              <img 
-                src="https://github-readme-stats.vercel.app/api/top-langs/?username=morindat&layout=compact&theme=dark&hide_border=true&bg_color=000000&title_color=3b82f6&text_color=94a3b8&icon_color=3b82f6" 
-                alt="Top Languages"
-                className="w-full max-w-md hover:scale-[1.02] transition-transform duration-500"
-              />
-            </div>
-          </div>
+          <GitHubStats username="morindat" />
         </div>
 
         {/* Course Work Marquee Section */}
