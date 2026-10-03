@@ -47,8 +47,8 @@ const Contact = () => {
     {
       icon: <FiLinkedin className="w-5 h-5" />,
       name: "LinkedIn",
-      username: "in/morindat",
-      link: "https://linkedin.com/in/morindat",
+      username: "in/papaa-morindat-425397248",
+      link: "https://www.linkedin.com/in/papaa-morindat-425397248",
       color: "hover:bg-blue-500/20",
       borderColor: "group-hover:border-blue-500"
     },

@@ -59,7 +59,7 @@ const Footer = () => {
             <div className="flex gap-6">
               <a href="mailto:papaadennis@gmail.com" className="text-gray-400 hover:text-blue-400 hover:scale-110 transition-all duration-300"><FaEnvelope size={20} /></a>
               <a href="https://github.com/morindat" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-400 hover:scale-110 transition-all duration-300"><FaGithub size={20} /></a>
-              <a href="https://linkedin.com/in/morindat" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-400 hover:scale-110 transition-all duration-300"><FaLinkedin size={20} /></a>
+              <a href="https://www.linkedin.com/in/papaa-morindat-425397248" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-400 hover:scale-110 transition-all duration-300"><FaLinkedin size={20} /></a>
               <a href="https://www.instagram.com/justindizzo17" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-400 hover:scale-110 transition-all duration-300"><FaInstagram size={20} /></a>
             </div>
 

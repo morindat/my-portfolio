@@ -21,7 +21,7 @@ const Terminal = () => {
     whoami: () => 'User: Guest\nRole: Explorer\nStatus: Online',
     about: () => 'I am Morindat, an aspiring Software Engineer focused on building high-performance, minimalist digital experiences.',
     skills: () => 'Languages: C, C++, JS, Python, OCaml, Rust\nTools: React, Node.js, Tailwind, MongoDB, Git',
-    contact: () => 'Email: papaadennis@gmail.com\nGitHub: @morindat\nLinkedIn: in/morindat',
+    contact: () => 'Email: papaadennis@gmail.com\nGitHub: @morindat\nLinkedIn: in/papaa-morindat-425397248',
     clear: () => {
       setHistory(welcomeMessage);
       return null;

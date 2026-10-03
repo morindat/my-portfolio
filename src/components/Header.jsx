@@ -122,7 +122,7 @@ const Header = () => {
             <FaGithub />
           </a>
           <a
-            href="https://linkedin.com/in/morindat"
+            href="https://www.linkedin.com/in/papaa-morindat-425397248"
             target="_blank"
             rel="noopener noreferrer"
             className="header-social-link"
@@ -163,7 +163,7 @@ const Header = () => {
         <div className="mobile-menu-socials">
           <a href="mailto:papaadennis@gmail.com" className="mobile-social-link" aria-label="Email"><FaEnvelope /></a>
           <a href="https://github.com/morindat" target="_blank" rel="noopener noreferrer" className="mobile-social-link" aria-label="GitHub"><FaGithub /></a>
-          <a href="https://linkedin.com/in/morindat" target="_blank" rel="noopener noreferrer" className="mobile-social-link" aria-label="LinkedIn"><FaLinkedin /></a>
+          <a href="https://www.linkedin.com/in/papaa-morindat-425397248" target="_blank" rel="noopener noreferrer" className="mobile-social-link" aria-label="LinkedIn"><FaLinkedin /></a>
           <a href="https://www.instagram.com/justindizzo17?igsh=cnk1b21jZHdpenF1" target="_blank" rel="noopener noreferrer" className="mobile-social-link" aria-label="Instagram"><FaInstagram /></a>
         </div>
       </div>
