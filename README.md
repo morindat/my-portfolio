@@ -1,13 +1,13 @@
 <div align="center">
   
-# 👨‍🚀 Justin's Portfolio
+# 👨‍🚀 Morindat's Portfolio
 
 [![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
 [![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 [![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-purple.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
-[Live Demo](https://morindat.netlify.app) • [Report Bug](https://github.com/Papadizzo/my-portfolio/issues) • [Request Feature](https://github.com/Papadizzo/my-portfolio/issues)
+[Live Demo](https://morindat.netlify.app) • [Report Bug](https://github.com/morindat/my-portfolio/issues) • [Request Feature](https://github.com/morindat/my-portfolio/issues)
 
 </div>
 
@@ -79,10 +79,10 @@ Want to run this on your own machine? Here's how:
 
 ```bash
 # Clone this repository
-git clone https://github.com/Papadizzo/portfolio.git
+git clone https://github.com/morindat/my-portfolio.git
 
 # Enter the project
-cd portfolio
+cd my-portfolio
 
 # Install dependencies (might take a lightyear ⏳)
 npm install
